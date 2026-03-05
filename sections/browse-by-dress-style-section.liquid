@@ -1,3 +1,4 @@
+{{ 'browse-by-dress-style.css' | asset_url | stylesheet_tag }}
 <div class="page-width browse-dress-style-section">
   <h2 class="dress-style-h2">{{ section.settings.heading }}</h2>
   <div class="card-container">
@@ -17,8 +18,8 @@
       <div class="card card-4">
         <h3>{{ section.settings.card_title_4 }}</h3>
       </div>
+    </div>
   </div>
-
 </div>
 
 {%  style  %}
@@ -31,41 +32,12 @@
   padding: {{ section.settings.padding }}px;
 }
 
-.dress-style-h2 {
-  text-align: center;
-}
-
-.card-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-.row-1-container,
-.row-2-container {
-  display: flex;
-  width: 100%;
-}
-
 .card {
   border-radius: {{ section.settings.card_border_radius }}px;
   height: 289px;
   padding: 25px 35px;
   margin: 0 10px;
   transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.03);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-
-.card-1,
-.card-2,
-.card-3,
-.card-4 {
-  background-size: cover;
-  background-position: center;
 }
 
 .card-1 {
@@ -86,40 +58,6 @@
 .card-4 {
   background-image: url({{ section.settings.card_image_4 | img_url: 'master' }});
   width: {{ section.settings.card_image_width_4 }}px; 
-}
-
-
-@media (max-width: 768px) {
-  .row-1-container,
-  .row-2-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 100%;
-    margin: 10px;
-    height: 190px;
-  }
-
-  .card-container {
-    gap: 0;
-  }
-}
-
-
-@media (max-width: 600px) {
-  .browse-dress-style-section {
-    padding: 20px;
-  }
-
-  .dress-style-h2 {
-    font-size: 32px;
-  }
-  
-  .card-container .card h3 {
-    font-size: 24px;
-  }
 }
 
 {% endstyle %}
