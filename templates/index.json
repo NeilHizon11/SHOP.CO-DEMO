@@ -29,6 +29,166 @@
         "hero_bot_padding": 0
       }
     },
+    "section_dxzHeX": {
+      "type": "section",
+      "blocks": {
+        "image_XDi33A": {
+          "type": "image",
+          "name": "t:names.image",
+          "settings": {
+            "image": "shopify://shop_images/versace.png",
+            "link": "",
+            "image_ratio": "adapt",
+            "width": "custom px",
+            "custom_width": 60,
+            "custom_width_px": 165,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "image_agadhJ": {
+          "type": "image",
+          "name": "t:names.image",
+          "settings": {
+            "image": "shopify://shop_images/zara-logo-1_1.png",
+            "link": "",
+            "image_ratio": "adapt",
+            "width": "custom px",
+            "custom_width": 60,
+            "custom_width_px": 90,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "image_gU3AWC": {
+          "type": "image",
+          "name": "t:names.image",
+          "settings": {
+            "image": "shopify://shop_images/gucci-logo-1_1.png",
+            "link": "",
+            "image_ratio": "adapt",
+            "width": "custom px",
+            "custom_width": 100,
+            "custom_width_px": 155,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "image_NMApb7": {
+          "type": "image",
+          "name": "t:names.image",
+          "settings": {
+            "image": "shopify://shop_images/prada-logo-1_1.png",
+            "link": "",
+            "image_ratio": "adapt",
+            "width": "custom px",
+            "custom_width": 100,
+            "custom_width_px": 195,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "image_MRcfW9": {
+          "type": "image",
+          "name": "t:names.image",
+          "settings": {
+            "image": "shopify://shop_images/Group.png",
+            "link": "",
+            "image_ratio": "adapt",
+            "width": "custom px",
+            "custom_width": 100,
+            "custom_width_px": 205,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "image_XDi33A",
+        "image_agadhJ",
+        "image_gU3AWC",
+        "image_NMApb7",
+        "image_MRcfW9"
+      ],
+      "name": "t:names.icons_with_text",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-5",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
     "product_list_fa6P9H": {
       "type": "product-list",
       "blocks": {
@@ -332,6 +492,7 @@
   },
   "order": [
     "hero_v2_EtYbQT",
+    "section_dxzHeX",
     "product_list_fa6P9H",
     "hero_hrp4G6"
   ]
