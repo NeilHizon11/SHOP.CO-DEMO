@@ -13,10 +13,13 @@
             {{ section.settings.text_content_1 }}
             <p>{{ section.settings.text_subcontent_1 }}</p>
           </div>
+
+          <div class="divider"></div>
           <div class="tc tc-2">
             {{ section.settings.text_content_2 }}
             <p>{{ section.settings.text_subcontent_2 }}</p>
           </div>
+          <div class="divider hidden--mobile"></div>
           <div class="tc tc-3">
             {{ section.settings.text_content_3 }}
             <p>{{ section.settings.text_subcontent_3 }}</p>
@@ -29,6 +32,15 @@
             src="{{ section.settings.hero_image | image_url: width: 2000 }}"
             alt="{{ section.settings.hero_image.alt | escape }}"
             loading="lazy"
+            class="hidden--mobile"
+          >
+        {% endif %}
+        {% if section.settings.hero_image != blank %}
+          <img
+            src="{{ section.settings.hero_image | image_url: width: 2000 }}"
+            alt="{{ section.settings.hero_image.alt | escape }}"
+            loading="lazy"
+            class="hidden--desktop"
           >
         {% endif %}
       </div>
@@ -45,6 +57,8 @@
   margin: auto;
   padding-top: {{ section.settings.hero_top_padding }}px;
   padding-bottom: {{ section.settings.hero_bot_padding }}px;
+  max-width: 1400px;
+  width: calc(100% - 40px);
 }
 
 .hero-wrapper,
@@ -58,8 +72,65 @@
 }
 
 .image-container img {
-  max-width: 65%;
+  max-width: 455px;
   width: 100%;
+  margin: auto;
+}
+
+@media (max-width: 900px) {
+  .text-contents {
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .image-container {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-wrapper {
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+  }
+
+  .content-container,
+  .image-container {
+    width: 100%;
+  }
+
+  .image-container {
+    margin-top: 30px;
+  }
+
+  .content-container a {
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 600px) {
+  .image-container {
+    display: none;
+  }
+
+  .hero-wrapper {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.tc p {
+  margin: auto;
+}
+
+.divider {
+  background: #e7e7e7;
+  width: 3px;
+  border-radius: 30px;
+  margin: 0 32px;
 }
 {% endstyle %}
 
@@ -139,6 +210,11 @@
       "type": "image_picker",
       "id": "hero_image",
       "label": "Featured Image"
+    },
+        {
+      "type": "image_picker",
+      "id": "hero_image_mobile",
+      "label": "Mobile Featured Image"
     },
     {
       "type": "header",

@@ -2,19 +2,19 @@
   <h2 class="dress-style-h2">{{ section.settings.heading }}</h2>
   <div class="card-container">
     <div class="row-1-container">
-      <div class="card" style="width: {{ section.settings.card_image_width_1 }}px; background-image: url({{ section.settings.card_image_1 | img_url: 'master' }}); background-size: cover; background-position: center;">
+      <div class="card card-1">
         <h3>{{ section.settings.card_title_1 }}</h3>
       </div>
-      <div class="card" style="width: {{ section.settings.card_image_width_2 }}px; background-image: url({{ section.settings.card_image_2 | img_url: 'master' }}); background-size: cover; background-position: center;">
+      <div class="card card-2">
         <h3>{{ section.settings.card_title_2 }}</h3>
       </div>
     </div>
 
     <div class="row-2-container">
-      <div class="card" style="width: {{ section.settings.card_image_width_3 }}px; background-image: url({{ section.settings.card_image_3 | img_url: 'master' }}); background-size: cover; background-position: center;">
+      <div class="card card-3">
         <h3>{{ section.settings.card_title_3 }}</h3>
       </div>
-      <div class="card" style="width: {{ section.settings.card_image_width_4 }}px; background-image: url({{ section.settings.card_image_4 | img_url: 'master' }}); background-size: cover; background-position: center;">
+      <div class="card card-4">
         <h3>{{ section.settings.card_title_4 }}</h3>
       </div>
   </div>
@@ -24,7 +24,9 @@
 {%  style  %}
 .browse-dress-style-section {
   border-radius: {{ section.settings.border_radius }}px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto; 
+  width: calc(100% - 40px);
   background-color: {{ section.settings.background_color }};
   padding: {{ section.settings.padding }}px;
 }
@@ -42,6 +44,7 @@
 .row-1-container,
 .row-2-container {
   display: flex;
+  width: 100%;
 }
 
 .card {
@@ -55,6 +58,68 @@
 .card:hover {
   transform: scale(1.03);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.card-1,
+.card-2,
+.card-3,
+.card-4 {
+  background-size: cover;
+  background-position: center;
+}
+
+.card-1 {
+  background-image: url({{ section.settings.card_image_1 | img_url: 'master' }});
+  width: {{ section.settings.card_image_width_1 }}px; 
+}
+
+.card-2 {
+  background-image: url({{ section.settings.card_image_2 | img_url: 'master' }});
+  width: {{ section.settings.card_image_width_2 }}px; 
+}
+
+.card-3 {
+  background-image: url({{ section.settings.card_image_3 | img_url: 'master' }});
+  width: {{ section.settings.card_image_width_3 }}px; 
+}
+
+.card-4 {
+  background-image: url({{ section.settings.card_image_4 | img_url: 'master' }});
+  width: {{ section.settings.card_image_width_4 }}px; 
+}
+
+
+@media (max-width: 768px) {
+  .row-1-container,
+  .row-2-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px;
+    height: 190px;
+  }
+
+  .card-container {
+    gap: 0;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .browse-dress-style-section {
+    padding: 20px;
+  }
+
+  .dress-style-h2 {
+    font-size: 32px;
+  }
+  
+  .card-container .card h3 {
+    font-size: 24px;
+  }
 }
 
 {% endstyle %}
