@@ -4963,3 +4963,21 @@ product-recommendations:has([data-has-recommendations='false']) {
     translate: 0px var(--atc-destination, 0px);
   }
 }
+
+.email-signup__input,
+.email-signup__button {
+  width: 80%;
+  border-radius: 30px;
+}
+
+.email-signup__input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-secondary,
+.button {
+  border-radius: 30px;
+  padding: 16px 60px;
+}
+
