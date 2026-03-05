@@ -1,0 +1,190 @@
+<div class="page-width browse-dress-style-section">
+  <h2 class="dress-style-h2">{{ section.settings.heading }}</h2>
+  <div class="card-container">
+    <div class="row-1-container">
+      <div class="card" style="width: {{ section.settings.card_image_width_1 }}px; background-image: url({{ section.settings.card_image_1 | img_url: 'master' }}); background-size: cover; background-position: center;">
+        <h3>{{ section.settings.card_title_1 }}</h3>
+      </div>
+      <div class="card" style="width: {{ section.settings.card_image_width_2 }}px; background-image: url({{ section.settings.card_image_2 | img_url: 'master' }}); background-size: cover; background-position: center;">
+        <h3>{{ section.settings.card_title_2 }}</h3>
+      </div>
+    </div>
+
+    <div class="row-2-container">
+      <div class="card" style="width: {{ section.settings.card_image_width_3 }}px; background-image: url({{ section.settings.card_image_3 | img_url: 'master' }}); background-size: cover; background-position: center;">
+        <h3>{{ section.settings.card_title_3 }}</h3>
+      </div>
+      <div class="card" style="width: {{ section.settings.card_image_width_4 }}px; background-image: url({{ section.settings.card_image_4 | img_url: 'master' }}); background-size: cover; background-position: center;">
+        <h3>{{ section.settings.card_title_4 }}</h3>
+      </div>
+  </div>
+
+</div>
+
+{%  style  %}
+.browse-dress-style-section {
+  border-radius: {{ section.settings.border_radius }}px;
+  margin: auto;
+  background-color: {{ section.settings.background_color }};
+  padding: {{ section.settings.padding }}px;
+}
+
+.dress-style-h2 {
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.row-1-container,
+.row-2-container {
+  display: flex;
+}
+
+.card {
+  border-radius: {{ section.settings.card_border_radius }}px;
+  height: 289px;
+  padding: 25px 35px;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Browse Dress Style",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "card_title_1",
+      "label": "Card 1 Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_image_1",
+      "label": "Card 1 Image"
+    },
+    {
+      "type": "range",
+      "id": "card_image_width_1",
+      "label": "Card 1 Image Width (px)",
+      "min": 100,
+      "max": 700,
+      "step": 10,
+      "default": 300
+    },
+    {
+      "type": "text",
+      "id": "card_title_2",
+      "label": "Card 2 Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_image_2",
+      "label": "Card 2 Image"
+    },
+    {
+      "type": "range",
+      "id": "card_image_width_2",
+      "label": "Card 2 Image Width (px)",
+      "min": 100,
+      "max": 700,
+      "step": 10,
+      "default": 300
+    },
+    {
+      "type": "text",
+      "id": "card_title_3",
+      "label": "Card 3 Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_image_3",
+      "label": "Card 3 Image"
+    },
+    {
+      "type": "range",
+      "id": "card_image_width_3",
+      "label": "Card 3 Image Width (px)",
+      "min": 100,
+      "max": 700,
+      "step": 10,
+      "default": 300
+    },
+    {
+      "type": "text",
+      "id": "card_title_4",
+      "label": "Card 4 Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "card_image_4",
+      "label": "Card 4 Image"
+    },
+    {
+      "type": "range",
+      "id": "card_image_width_4",
+      "label": "Card 4 Image Width (px)",
+      "min": 100,
+      "max": 700,
+      "step": 10,
+      "default": 300
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Section Border Radius",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Card Border Radius",
+      "default": 10
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+     {
+      "type": "range",
+      "id": "padding",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Card Padding",
+      "default": 10
+    },
+  ],
+  "presets": [
+    {
+      "name": "Browse Dress Style"
+    }
+  ]
+}
+{% endschema %}
